@@ -1,7 +1,94 @@
-body {
-    background: honeydew;
+/*
+COLOR PALLET
+
+Red Pantalone: #e63946
+Honeydew: #f1faee
+Non Photogenic Blue: #a8dadc
+Cerulean: #457b9d
+Berkley Blue: #1d3557
+*/
+
+/* GLOBAL STYLES
+=====================================================================*/
+/* 
+  https://www.paulirish.com/2012/box-sizing-border-box-ftw/
+*/
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+        box-sizing: inherit;
+  }
+
+html, body{
+    height: 100%;
 }
 
+body {
+    background: honeydew;
+    margin: 0;
+}
+
+h1, h2, h3 {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+p{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+/* LINKS*/
+a{
+    font-family: 'Courier New', Courier, monospace;
+    color:#457b9d;
+}
+
+a:hover {
+    color:#e63946;
+    text-decoration: none;
+}
+
+footer a{
+    font-family: 'Courier New', Courier, monospace;
+    color: #e63946;
+}
+footer a:hover {
+    color: #457b9d;
+    text-decoration: none;
+}
+
+.btn {
+    background: #457b9d;
+    color: #f1faee ;
+}
+
+.content-wrapper {
+    margin: 0 auto;
+    padding: 30px;
+
+    max-width: 900px;
+
+}
+/* HOME
+=====================================================================*/
+.home {
+    background: url(../images/bg-home-office-studio.jpg) no-repeat;
+    background-size: cover;
+
+}
+
+.home .content-wrapper{
+    background: rgb(255 255 255 / 0.9);
+}
+
+
+
+
+
+
+/* RESUME
+=====================================================================*/
 .button {
     font-family: 'Courier New', Courier, monospace;
     border:none;
@@ -19,16 +106,67 @@ body {
     color: white;
 }
 
-h1, h2, h3 {
-    font-family: 'Courier New', Courier, monospace;
+.resume header::before {
+    background: url(../images/bg-home-office-city.jpg);
+    background-size: cover;
+    background-position: center;
+    content: "";
+    display: block;
+    height: 375px;
 }
 
 
-p{
-    font-family: 'Courier New', Courier, monospace;
-}
 
-a{
-    font-family: 'Courier New', Courier, monospace;
-    color: #e63946;
+
+
+/* PROFILE
+=====================================================================*/
+
+
+
+
+
+
+/* PROJECTS
+=====================================================================*/
+
+
+
+
+
+
+
+/* WORK EXPERIENCE
+=====================================================================*/
+
+
+
+
+
+
+
+
+/* EDUCATION
+=====================================================================*/
+
+
+
+
+
+
+/* FOOTER
+=====================================================================*/
+footer {
+    background: #1d3557;
+    color: white; 
+}
+.socials{
+    list-style-type: none;
+    padding: 0;
+}
+.socials li{
+    display: inline-block;
+}
+.socials img {
+    width: 32px;
 }
