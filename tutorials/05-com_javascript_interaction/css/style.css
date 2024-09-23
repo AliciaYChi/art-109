@@ -1,0 +1,103 @@
+/*
+CSS RESETS:
+ Border box reset:
+https://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ 62.5% Fix: https: //www.aleksandrhovhannisyan.com/blog/62-5-percent-font-size-trick/
+*/
+
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+ }
+ 
+ 
+ *,
+ *:before,
+ *:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+ }
+ 
+ 
+ html,
+ body {
+    height: 100%;
+ }
+ 
+ 
+ body {
+     font-size: 1.6rem;
+    /* font-size 1.6rem is now the same as 16px */
+    line-height: 1.6;
+    background-color: blueviolet;
+    color: whitesmoke;
+ }
+
+ header {
+    padding: 50px;
+    background-color: aqua;
+    text-align: center;
+
+ }
+ 
+main {
+   /* max-width: 800px;
+    margin: 50px auto;
+    */
+ }
+
+.image-div {
+    display: inline-block;
+
+}
+
+#image-0 {
+    position: absolute;
+    top: 850px;
+    right: 20vw;
+}
+
+#image-01 {
+    position: absolute;
+    top: 150px;
+    left: 60vw;
+}
+
+#image-02 {
+    position: absolute;
+    top: 750px;
+    left: 10vw;
+}
+
+#image-03 {
+    position: absolute;
+    scale: 50%;
+    top: 150px;
+    
+}
+
+#image-04 {
+    position: absolute;
+    scale: 50%;
+    top: 50px;
+    left: 10vw;
+}
+
+#image-05 {
+    position: absolute;
+    scale:80%;
+    top: 50px;
+    left: 20vw;
+}
+
+#image-06 {
+    
+}
+#image-07 {
+    position: absolute;
+    scale:40%;
+    top: 50px;
+    left: 50vw; 
+}
