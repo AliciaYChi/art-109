@@ -53,6 +53,10 @@ main {
 
 }
 
+.hidden {
+    visibility: hidden;
+}
+
 #image-0 {
     position: absolute;
     top: 850px;
