@@ -1,0 +1,52 @@
+
+/* ============= ============= UNIVERSAL ============= =============*/
+a {
+    text-decoration: none;
+}
+/* ============= ============= INDEX ============= =============*/
+.index-body{
+    background-color: rgb(65, 110, 233);
+}
+
+.dialog-1,.dialog-2 {
+    color: rgb(255, 240, 240);
+    font-size: 1.3rem;
+}
+
+/* DIALOG 1 = FORMER PRESIDENT TRUMP  */
+.dialog-1{
+    float: left;
+    width: 45%;
+    padding: 20px;
+}
+.dialog-1 h2{
+    color: rgb(248, 45, 45);
+    background-color: beige;
+    border-radius:5px;
+    padding: 0 20px ;
+    
+}
+
+
+/* DIALOG 2 = DAVID MUIR */
+.dialog-2{
+    float: right;
+    width: 45%;
+    padding: 20px;
+}
+
+.dialog-2 h2{
+    color: rgb(24, 14, 14);
+    background-color: beige;
+    background-color: beige;
+    border-radius:5px;
+    padding: 0 20px ;
+}
+
+
+
+/* ============= ============= JARGON PAGE ============= =============*/
+
+.pre-art {
+    color: rgb(30, 9, 44);
+}
