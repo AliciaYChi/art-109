@@ -4,12 +4,23 @@ a {
     text-decoration: none;
 }
 /* ============= ============= INDEX ============= =============*/
+
+
+#art {
+    color: rgb(30, 9, 44);
+}
+/* ============= ============= Yada Yada ============= =============*/
+
 .index-body{
     background-color: rgb(65, 110, 233);
 }
 .nomnom {
-    font-size: 30px;
+    font-size: 50px;
     color: rgb(255, 221, 31);
+}
+.wtf {
+    font-size: 15px;
+    color: rgb(0, 0, 0);
 }
 .dialog-1,.dialog-2 {
     color: rgb(255, 240, 240) ;
@@ -50,10 +61,56 @@ a {
     font-size: 2.1rem;
 }
 
+/* ==========================IMAGES ==========================*/
 
+.image-div {
+    display: inline-block;
 
-/* ============= ============= JARGON PAGE ============= =============*/
-
-.pre-art {
-    color: rgb(30, 9, 44);
 }
+
+.hidden {
+    visibility: hidden;
+}
+
+#img_00 {
+    position:absolute;
+    left: 30vw;
+
+}
+
+#img_01 {
+    position:absolute;
+}
+
+#img_02 {
+    position:absolute;
+    left: 60%;
+    scale: 80%;
+}
+
+#img_03 {
+    position:absolute;
+    top: 80%;
+    left: 60vw;
+    scale: 50%;
+}
+
+#img_04 {
+    position:absolute;
+    top: 820px;
+    right: 60vw;
+}
+
+#img_05 {
+    position:absolute;
+    top: 80vw;
+    left: 30vw;
+    scale: 150%;
+    opacity: 80%;
+}
+
+#img_06 {
+    position:absolute;
+}
+
+

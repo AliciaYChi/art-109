@@ -15,6 +15,7 @@ header.onclick = function(){
     body.style.backgroundColor= "purple";
 }
 
+//IMAGES MADE VISIBLE
 document.querySelector("#image-0").addEventListener("click", function(){
     document.querySelector("#image-01").style.visibility = "visible";
     alert("EXPLODE");
@@ -48,3 +49,5 @@ document.querySelector("#image-06").addEventListener("click", function(){
 document.querySelector("#image-07").addEventListener("click", function(){
     document.querySelector("#image-07").style.display = "none";
 })
+
+
