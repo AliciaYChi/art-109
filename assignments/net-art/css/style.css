@@ -7,9 +7,12 @@ a {
 .index-body{
     background-color: rgb(65, 110, 233);
 }
-
+.nomnom {
+    font-size: 30px;
+    color: rgb(255, 221, 31);
+}
 .dialog-1,.dialog-2 {
-    color: rgb(255, 240, 240);
+    color: rgb(255, 240, 240) ;
     font-size: 1.3rem;
 }
 
@@ -18,12 +21,14 @@ a {
     float: left;
     width: 45%;
     padding: 20px;
+    font-size: 23px;
 }
 .dialog-1 h2{
     color: rgb(248, 45, 45);
     background-color: beige;
     border-radius:5px;
     padding: 0 20px ;
+    font-size: 2.1rem;
     
 }
 
@@ -33,6 +38,7 @@ a {
     float: right;
     width: 45%;
     padding: 20px;
+    font-size: 23px;
 }
 
 .dialog-2 h2{
@@ -41,6 +47,7 @@ a {
     background-color: beige;
     border-radius:5px;
     padding: 0 20px ;
+    font-size: 2.1rem;
 }
 
 
