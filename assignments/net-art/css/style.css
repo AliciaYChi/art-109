@@ -5,15 +5,13 @@ a {
 }
 /* ============= ============= INDEX ============= =============*/
 
-
+.index-body{
+    background-color: rgb(65, 110, 233);
+}
 #art {
     color: rgb(30, 9, 44);
 }
 /* ============= ============= Yada Yada ============= =============*/
-
-.index-body{
-    background-color: rgb(65, 110, 233);
-}
 .nomnom {
     font-size: 50px;
     color: rgb(255, 221, 31);
@@ -43,7 +41,6 @@ a {
     
 }
 
-
 /* DIALOG 2 = DAVID MUIR */
 .dialog-2{
     float: right;
@@ -65,7 +62,6 @@ a {
 
 .image-div {
     display: inline-block;
-
 }
 
 .hidden {
@@ -75,7 +71,6 @@ a {
 #img_00 {
     position:absolute;
     left: 30vw;
-
 }
 
 #img_01 {
@@ -92,7 +87,7 @@ a {
     position:absolute;
     top: 80%;
     left: 60vw;
-    scale: 50%;
+    scale: 70%;
 }
 
 #img_04 {
@@ -112,5 +107,6 @@ a {
 #img_06 {
     position:absolute;
 }
+
 
 

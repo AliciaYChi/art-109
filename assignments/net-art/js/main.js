@@ -9,20 +9,20 @@ let img_06 = document.querySelector("#img_06");
 
 //JavaScript Time out changes <pre> title after 3 sec ===============
        
-let art = document.getElementById('art');
+//let art = document.getElementById('art');
 
-    setInterval(changeColor, 1000);
+    //setInterval(changeColor, 1000);
     
-        function changeColor(){
+        //function changeColor(){
 
-            var r = Math.floor(Math.random()*255);
-            var g = Math.floor(Math.random()*255);
-            var b = Math.floor(Math.random()*255);
+           // var r = Math.floor(Math.random()*255);
+           // var g = Math.floor(Math.random()*255);
+            //var b = Math.floor(Math.random()*255);
 
-            art.style.color = "RGB("+r+","+g+","+b+")");
+            //art.style.color = "RGB("+r+","+g+","+b+")");
 
-        }
-    changeColor();
+        //}
+    //changeColor();
 
 //===================================================================
 
