@@ -29,7 +29,7 @@ function init(){
 
     // ~~~~~~~~~~~~~~~~ 3-D stuff ~~~~~~~~~~~~~~~~
     const geometry = new THREE.BoxGeometry(1, 1, 1);
-    const texture = new THREE.TextureLoader().load('img/ice.jpg');
+    const texture = new THREE.TextureLoader().load('texture/ice.jpg');
     const material = new THREE.MeshBasicMaterial({ map: texture });
     const cube = new THREE.Mesh(geometry, material);
     const cube = new THREE.Mesh(geometry, material);
