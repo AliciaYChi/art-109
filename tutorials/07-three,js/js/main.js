@@ -6,7 +6,7 @@ import { GLTFLoader } from 'https://unpkg.com/three@0.162.0/examples/jsm/loaders
 
 
 //....... GLOBAL VARIABLES
-let scene, camera, torus, capsule, prism_poupy, prism_poupy1, prism_poupy2, prism_poupy3, prism_poupy4, mixer, dog_shiny;
+let scene, camera, torus, capsule, prism_poupy, prism_poupy1, prism_poupy2, prism_poupy3, prism_poupy4, mixer, dog;
 let actionPant, actionTail;
 let sceneContainer = document.querySelector("#scene-container");
 
@@ -43,46 +43,27 @@ function init(){
     // ~~~~~~~~~~~~~~~~ Initiate add-ons ~~~~~~~~~~~~~~~~
     const controls = new OrbitControls(camera, renderer.domElement); 
     const loader = new GLTFLoader(); // to load 3d models
+    loader.load('assets/dog_shiny.gltf', function (gltf) {
+        dog = gltf.scene;
+        scene.add(dog);
+        dog.scale.set(3, 3, 3);
+        dog.position.y = -1.5; // move down a little
 
-    assetLoader.load(monkeyUrl.href, function(gltf) {
-        const model = gltf.scene;
-        scene.add(model);
-        mixer = new THREE.AnimationMixer(model);
-        const clips = gltf.animations;
-        const clip = THREE.AnimationClip.findByName(clips, 'HeadAction)');
-        
-        clips.forEach(function(clip) {
-        const action = mixer.clipAction(clip);
-        action.play();
+        // animation!
+        mixer = new THREE.AnimationMixer(dog); // initiate mixer
+        const clips = gltf.animations;  // load all clips
+
+        // load + play pant animation
+        const clipPant = THREE.AnimationClip.findByName(clips, 'pant');
+        const actionPant = mixer.clipAction(clipPant);
+        actionPant.play();
+
+        // load + play tail animation
+        const clipTail = THREE.AnimationClip.findByName(clips, 'tail');
+        const actionTail = mixer.clipAction(clipTail);
+        actionTail.play();
     });
 
-    }, undefined, function(error) {
-        console.error(error);
-    });
-    
-    // loader.load('assets/dog_shiny.gltf', function (gltf){
-    //     dog = gltf.scene;
-    //     scene.add(dog);
-    //     dog.scale.set(5,5,5);
-    //     dog.translateY(-2);
-        
-    //     //animation
-    //     mixer = THREE.AnimationMixer(dog);
-    //     const clips = gltf.animations;
-
-    //     // load + play animation
-
-    //      clipPant = THREE.AnimationClip.findByName(clips, 'pant');
-    //       actionPant = mixer.clipAction(clipPant);
-    //     // action.play();
-
-    //      clipTail = THREE.AnimationClip.findByName(clips, 'tail');
-    //      actionTail = mixer.clipAction(clipTail);
-    //     action.play();
-
-    // });
-
-    
     loader.load('assets/prisim_poupy.gltf', function (gltf){
         prism_poupy = gltf.scene;
         scene.add(prism_poupy);
@@ -149,12 +130,51 @@ document.querySelector("header").addEventListener("mousedown", () => {
 });
 
 
+//===================== MOUSE EVENT
+
+let mouseDown = false;
+
+
+document.querySelector('#scene-container').addEventListener('mousedown', () => {
+    console.log("mouse clicked");
+    mouseDown = true;
+    actionTail.play();
+    actionTail.paused = false;
+
+});
+document.querySelector('#scene-container').addEventListener('mouseup', () => {
+    console.log("mouse released");
+    mouseDown = false;
+    // actionTail.stop();
+    actionTail.paused = true;
+
+});
+
+document.querySelector('#scene-container').addEventListener('mousemove', (e) => {
+    if (mouseDown) {
+        console.log("dragged");
+        prism_poupy2.rotation.x += .5;
+    }
+});
+document.querySelector('#scene-container').addEventListener('mousemove', (e) => {
+    if (mouseDown) {
+        console.log("dragged");
+        prism_poupy4.rotation.y += .2;
+    }
+});
+
+
+
 //===================== ANIAMTION
 const clock = new THREE.Clock();
 
  function animate() {
     //  requestAnimationFrame(animate);
+    if (dog) { // check to see if model loaded first
+        mixer.update(clock.getDelta());
+        dog.rotation.y = Math.sin(Date.now() / 2000) * 1.2;
 
+    }
 
     if (prism_poupy){
         prism_poupy.rotation.x -= 0.007;
