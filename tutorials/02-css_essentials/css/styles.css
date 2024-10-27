@@ -26,7 +26,7 @@ html, body{
 }
 
 body {
-    background: honeydew;
+    background: #a8dadc;
     margin: 0;
     font-family: "Cuprum", sans-serif;
     font-size: 1.5rem;
@@ -145,8 +145,8 @@ footer a:hover {
     padding: 15px 32px;
     margin: 4px 2px;
     text-align: center;
-    color: #1D3557;
-    background: #A8DADC;
+    color: white;
+    background: #1D3557;
     transition-duration: 0.4s;
 }
 
@@ -156,12 +156,12 @@ footer a:hover {
 }
 
 .resume header::before {
-    background: url(../images/bg-home-office-city.jpg);
+    background: url(../images/lost_starling.png);
     background-size: cover;
     background-position: center;
     content: "";
     display: block;
-    height: 375px;
+    height: 275px;
 }
 
 .resume-section {
