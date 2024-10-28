@@ -8,6 +8,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400..700;1,400..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+
+    <!-- use an import map to link to the Three.js CDN -->
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.162.0/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@0.162.0/examples/jsm/"
+        }
+       }
+      </script>
+          <!-- Link to your Javascript file as a type="module", this will execute the file after the HTML is loaded -->
+    <script type="module" src="js/main.js"></script>
+    
   </head>
   <body class="home">
     <!-- //  INTRO  // -->
@@ -34,14 +47,33 @@
           <!-- End content edits here. -->
           </main>
       </div>
+
     </div>
 
-    <div class="img-gallery">
-      
-    </div>
+    <body>
+      <main>
+        <div id="scene-container">
+          <!---Three scene will be inserted here--->
+          
+        </div>
+      </main>
 
+      <div class="content-wrapper1">
+              <div class="image-gallery">
+                <img src="images/img-gallery/img0.png">
+                <img src="images/img-gallery/img1.png">
+                <img src="images/img-gallery/img2.png">
+                <img src="images/img-gallery/img3.jpg">
+                <img src="images/img-gallery/img4.jpg">
+                <img src="images/img-gallery/img5.png">
+                <img src="images/img-gallery/img6.png">
+                <img src="images/img-gallery/img7.png">
+                <img src="images/img-gallery/img8.png">
+              </div>
+      </div>   
+    
 
-   <!-- //  FOOTER INFO, SOCIAL MEDIA  // -->
+  </body>
     <footer>
       <!-- Start content edits below this line. -->
       <p>© 2023 by Alicia Chi | <a href="mailto:ali.yuen.chi@gmail.com">ali.yuen.chi@gmail.com</a></p>
@@ -63,5 +95,6 @@
       </ul>
       <!-- End content edits here. -->
     </footer>
+    <script type="module" src="js/main.js"></script>
   </body>
 </html>
