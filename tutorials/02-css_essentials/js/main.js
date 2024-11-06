@@ -6,11 +6,10 @@ import { GLTFLoader } from 'https://unpkg.com/three@0.162.0/examples/jsm/loaders
 
 
 //....... GLOBAL VARIABLES
-let scene, camera, torus, capsule, prism_poupy, prism_poupy1, prism_poupy2, prism_poupy3, prism_poupy4, mixer, envi, mother, mother2;
-let actionPant, actionTail;
+let scene, camera, capsule, prism_poupy, prism_poupy1, prism_poupy2, prism_poupy3, prism_poupy4, mixer1, mixer2, envi, mother, mother2;
 let sceneContainer = document.querySelector("#scene-container");
 
-const monkeyUrl = new URL('../assets/dog_shiny.gltf', import.meta.url);
+const monkeyUrl = new URL('../assets/mother.gltf', import.meta.url);
 
 const renderer = new THREE.WebGLRenderer({antialias: true, alpha: true});
 
@@ -22,7 +21,6 @@ function init(){
     //===================== SCENE
     scene = new THREE.Scene();
     scene.background = new THREE.Color(0x000000)
-
     const light_1 = new THREE.DirectionalLight(0xffffff, 3);
     light_1.position.set(1,1,15);
     
@@ -56,52 +54,52 @@ function init(){
         mother.rotation.y = 360;
 
         // animation!
-        mixer = new THREE.AnimationMixer(mother); // initiate mixer
+        mixer1 = new THREE.AnimationMixer(mother); // initiate mixer
         const clips = gltf.animations;  // load all clips
 
         // load + play leg1 animation
         const clipLeg1 = THREE.AnimationClip.findByName(clips, 'leg1');
-        const actionLeg1 = mixer.clipAction(clipLeg1);
+        const actionLeg1 = mixer1.clipAction(clipLeg1);
         actionLeg1.play();
 
         // load + play leg2 animation
         const clipLeg2 = THREE.AnimationClip.findByName(clips, 'leg2');
-        const actionLeg2 = mixer.clipAction(clipLeg2);
+        const actionLeg2 = mixer1.clipAction(clipLeg2);
         actionLeg2.play();
 
         // load + play hand animation
         const clipHand = THREE.AnimationClip.findByName(clips, 'hand');
-        const actionHand = mixer.clipAction(clipHand);
+        const actionHand = mixer1.clipAction(clipHand);
         actionHand.play();
 
         // load + play hand1 animation
         const clipHand1 = THREE.AnimationClip.findByName(clips, 'hand1');
-        const actionHand1 = mixer.clipAction(clipHand1);
+        const actionHand1 = mixer1.clipAction(clipHand1);
         actionHand1.play();   
 
         // load + play hand2 animation
         const clipHand2 = THREE.AnimationClip.findByName(clips, 'hand2');
-        const actionHand2 = mixer.clipAction(clipHand2);
+        const actionHand2 = mixer1.clipAction(clipHand2);
         actionHand2.play();
      
         // load + play hand3 animation
         const clipHand3 = THREE.AnimationClip.findByName(clips, 'hand3');
-        const actionHand3 = mixer.clipAction(clipHand3);
+        const actionHand3 = mixer1.clipAction(clipHand3);
         actionHand3.play();
 
         // load + play hand4 animation
         const clipHand4 = THREE.AnimationClip.findByName(clips, 'hand4');
-        const actionHand4 = mixer.clipAction(clipHand4);
+        const actionHand4 = mixer1.clipAction(clipHand4);
         actionHand4.play();
 
         // load + play hand5 animation
         const clipHand5 = THREE.AnimationClip.findByName(clips, 'hand5');
-        const actionHand5 = mixer.clipAction(clipHand5);
+        const actionHand5 = mixer1.clipAction(clipHand5);
         actionHand5.play();
 
         // load + play hand6 animation
         const clipHand6 = THREE.AnimationClip.findByName(clips, 'hand6');
-        const actionHand6 = mixer.clipAction(clipHand6);
+        const actionHand6 = mixer1.clipAction(clipHand6);
         actionHand6.play();
     });
 
@@ -113,54 +111,54 @@ function init(){
         mother2.position.x = -20; 
         mother2.position.y = 5;
         mother2.rotation.y = 180;
-
+        //change all actions to unique names
         // animation!
-        mixer = new THREE.AnimationMixer(mother2); // initiate mixer
+        mixer2 = new THREE.AnimationMixer(mother2); // initiate mixer
         const clips = gltf.animations;  // load all clips
 
         // load + play leg1 animation
         const clipLeg1 = THREE.AnimationClip.findByName(clips, 'leg1');
-        const actionLeg1 = mixer.clipAction(clipLeg1);
+        const actionLeg1 = mixer2.clipAction(clipLeg1);
         actionLeg1.play();
 
         // load + play leg2 animation
         const clipLeg2 = THREE.AnimationClip.findByName(clips, 'leg2');
-        const actionLeg2 = mixer.clipAction(clipLeg2);
+        const actionLeg2 = mixer2.clipAction(clipLeg2);
         actionLeg2.play();
 
         // load + play hand animation
         const clipHand = THREE.AnimationClip.findByName(clips, 'hand');
-        const actionHand = mixer.clipAction(clipHand);
+        const actionHand = mixer2.clipAction(clipHand);
         actionHand.play();
 
         // load + play hand1 animation
         const clipHand1 = THREE.AnimationClip.findByName(clips, 'hand1');
-        const actionHand1 = mixer.clipAction(clipHand1);
+        const actionHand1 = mixer2.clipAction(clipHand1);
         actionHand1.play();   
 
         // load + play hand2 animation
         const clipHand2 = THREE.AnimationClip.findByName(clips, 'hand2');
-        const actionHand2 = mixer.clipAction(clipHand2);
+        const actionHand2 = mixer2.clipAction(clipHand2);
         actionHand2.play();
      
         // load + play hand3 animation
         const clipHand3 = THREE.AnimationClip.findByName(clips, 'hand3');
-        const actionHand3 = mixer.clipAction(clipHand3);
+        const actionHand3 = mixer2.clipAction(clipHand3);
         actionHand3.play();
 
         // load + play hand4 animation
         const clipHand4 = THREE.AnimationClip.findByName(clips, 'hand4');
-        const actionHand4 = mixer.clipAction(clipHand4);
+        const actionHand4 = mixer2.clipAction(clipHand4);
         actionHand4.play();
 
         // load + play hand5 animation
         const clipHand5 = THREE.AnimationClip.findByName(clips, 'hand5');
-        const actionHand5 = mixer.clipAction(clipHand5);
+        const actionHand5 = mixer2.clipAction(clipHand5);
         actionHand5.play();
 
         // load + play hand6 animation
         const clipHand6 = THREE.AnimationClip.findByName(clips, 'hand6');
-        const actionHand6 = mixer.clipAction(clipHand6);
+        const actionHand6 = mixer2.clipAction(clipHand6);
         actionHand6.play();
     });
 
@@ -209,6 +207,43 @@ function init(){
          prism_poupy4.translateY(-3);
      });
 
+////////////////////////PARTICLES/////////////////////////////////
+     const geometry = new THREE.TorusGeometry( .7, .2, 16, 100 );
+
+     const particlesGeometry = new THREE.BufferGeometry;
+     const particlesCnt = 8000;
+     
+     const posArray = new Float32Array(particlesCnt * 3);
+     
+     for(let i = 0; i < particlesCnt * 3; i++){
+         // posArray[i] = Math.random()
+         // posArray[i] = Math.random() - 0.5
+         posArray[i] = (Math.random() - 0.8) * 20
+     }
+     
+     particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+     
+     // Materials
+     
+     const material = new THREE.PointsMaterial({
+         size: 0.005
+     })
+     
+     const particlesMaterial = new THREE.PointsMaterial({
+         size: 0.02,
+         // map: cross,
+         // transparent: true
+         blending: THREE.AdditiveBlending
+     })
+     
+     // Mesh
+     const sphere = new THREE.Points(geometry,material)
+     const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial);
+     scene.add(sphere, particlesMesh)
+ 
+ 
+
+
     //===================== CAMERA
     camera.position.z = 5;
 
@@ -222,15 +257,17 @@ let mouseDown = false;
 document.querySelector('#scene-container').addEventListener('mousedown', () => {
     console.log("mouse clicked");
     mouseDown = true;
-    actionTail.play();
-    actionTail.paused = false;
+    actionLeg1.play();
+    actionLeg2.play();
+    actionLeg1.paused = false;
+    actionLeg2.paused = false;
 
 });
 document.querySelector('#scene-container').addEventListener('mouseup', () => {
     console.log("mouse released");
     mouseDown = false;
-    // actionTail.stop();
-    actionTail.paused = true;
+        actionLeg1.paused = true;
+        actionLeg2.paused = true;
 
 });
 
@@ -255,11 +292,11 @@ const clock = new THREE.Clock();
  function animate() {
     //  requestAnimationFrame(animate);
     if (mother) { // check to see if model loaded first
-        mixer.update(clock.getDelta());
+        mixer1.update(clock.getDelta());
     }
 
     if (mother2) { // check to see if model loaded first
-        mixer.update(clock.getDelta());
+        mixer2.update(clock.getDelta());
     }
     
 
