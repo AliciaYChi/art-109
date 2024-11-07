@@ -6,7 +6,7 @@ import { GLTFLoader } from 'https://unpkg.com/three@0.162.0/examples/jsm/loaders
 
 
 //....... GLOBAL VARIABLES
-let scene, camera, capsule, prism_poupy, prism_poupy1, prism_poupy2, prism_poupy3, prism_poupy4, mixer1, mixer2, envi, mother, mother2;
+let scene, camera, prism_poupy, prism_poupy1, prism_poupy2, prism_poupy3, prism_poupy4, mixer1, mixer2, envi, mother1, mother2;
 let sceneContainer = document.querySelector("#scene-container");
 
 const monkeyUrl = new URL('../assets/mother.gltf', import.meta.url);
@@ -45,16 +45,16 @@ function init(){
     const loader = new GLTFLoader(); // to load 3d models
 
     loader.load('assets/mother.gltf', function (gltf) {
-        mother = gltf.scene;
-        scene.add(mother);
-        mother.scale.set(.07, .07, .07);
-        mother.position.z = -20; 
-        mother.position.x = 20; 
-        mother.position.y = 5;
-        mother.rotation.y = 360;
+        mother1 = gltf.scene;
+        scene.add(mother1);
+        mother1.scale.set(.07, .07, .07);
+        mother1.position.z = -20; 
+        mother1.position.x = 25; 
+        mother1.position.y = 5;
+        mother1.rotation.y = 360;
 
         // animation!
-        mixer1 = new THREE.AnimationMixer(mother); // initiate mixer
+        mixer1 = new THREE.AnimationMixer(mother1); // initiate mixer
         const clips = gltf.animations;  // load all clips
 
         // load + play leg1 animation
@@ -108,7 +108,7 @@ function init(){
         scene.add(mother2);
         mother2.scale.set(.07, .07, .07);
         mother2.position.z = -20; 
-        mother2.position.x = -20; 
+        mother2.position.x = -25; 
         mother2.position.y = 5;
         mother2.rotation.y = 180;
         //change all actions to unique names
@@ -117,49 +117,49 @@ function init(){
         const clips = gltf.animations;  // load all clips
 
         // load + play leg1 animation
-        const clipLeg1 = THREE.AnimationClip.findByName(clips, 'leg1');
-        const actionLeg1 = mixer2.clipAction(clipLeg1);
-        actionLeg1.play();
+        const clipLegL1 = THREE.AnimationClip.findByName(clips, 'legL1');
+        const actionLegL1 = mixer2.clipAction(clipLegL1);
+        actionLegL1.play();
 
         // load + play leg2 animation
-        const clipLeg2 = THREE.AnimationClip.findByName(clips, 'leg2');
-        const actionLeg2 = mixer2.clipAction(clipLeg2);
-        actionLeg2.play();
+        const clipLegL2 = THREE.AnimationClip.findByName(clips, 'legL2');
+        const actionLegL2 = mixer2.clipAction(clipLegL2);
+        actionLegL2.play();
 
         // load + play hand animation
-        const clipHand = THREE.AnimationClip.findByName(clips, 'hand');
-        const actionHand = mixer2.clipAction(clipHand);
-        actionHand.play();
+        const clipHandL = THREE.AnimationClip.findByName(clips, 'handL');
+        const actionHandL = mixer2.clipAction(clipHandL);
+        actionHandL.play();
 
         // load + play hand1 animation
-        const clipHand1 = THREE.AnimationClip.findByName(clips, 'hand1');
-        const actionHand1 = mixer2.clipAction(clipHand1);
-        actionHand1.play();   
+        const clipHandL1 = THREE.AnimationClip.findByName(clips, 'handL1');
+        const actionHandL1 = mixer2.clipAction(clipHandL1);
+        actionHandL1.play();   
 
         // load + play hand2 animation
-        const clipHand2 = THREE.AnimationClip.findByName(clips, 'hand2');
-        const actionHand2 = mixer2.clipAction(clipHand2);
-        actionHand2.play();
+        const clipHandL2 = THREE.AnimationClip.findByName(clips, 'handL2');
+        const actionHandL2 = mixer2.clipAction(clipHandL2);
+        actionHandL2.play();
      
         // load + play hand3 animation
-        const clipHand3 = THREE.AnimationClip.findByName(clips, 'hand3');
-        const actionHand3 = mixer2.clipAction(clipHand3);
-        actionHand3.play();
+        const clipHandL3 = THREE.AnimationClip.findByName(clips, 'handL3');
+        const actionHandL3 = mixer2.clipAction(clipHandL3);
+        actionHandL3.play();
 
         // load + play hand4 animation
-        const clipHand4 = THREE.AnimationClip.findByName(clips, 'hand4');
-        const actionHand4 = mixer2.clipAction(clipHand4);
-        actionHand4.play();
+        const clipHandL4 = THREE.AnimationClip.findByName(clips, 'handL4');
+        const actionHandL4 = mixer2.clipAction(clipHandL4);
+        actionHandL4.play();
 
         // load + play hand5 animation
-        const clipHand5 = THREE.AnimationClip.findByName(clips, 'hand5');
-        const actionHand5 = mixer2.clipAction(clipHand5);
-        actionHand5.play();
+        const clipHandL5 = THREE.AnimationClip.findByName(clips, 'handL5');
+        const actionHandL5 = mixer2.clipAction(clipHandL5);
+        actionHandL5.play();
 
         // load + play hand6 animation
-        const clipHand6 = THREE.AnimationClip.findByName(clips, 'hand6');
-        const actionHand6 = mixer2.clipAction(clipHand6);
-        actionHand6.play();
+        const clipHandL6 = THREE.AnimationClip.findByName(clips, 'handL6');
+        const actionHandL6 = mixer2.clipAction(clipHandL6);
+        actionHandL6.play();
     });
 
     loader.load('assets/env.gltf', function (gltf){
@@ -216,8 +216,6 @@ function init(){
      const posArray = new Float32Array(particlesCnt * 3);
      
      for(let i = 0; i < particlesCnt * 3; i++){
-         // posArray[i] = Math.random()
-         // posArray[i] = Math.random() - 0.5
          posArray[i] = (Math.random() - 0.8) * 20
      }
      
@@ -240,15 +238,10 @@ function init(){
      const sphere = new THREE.Points(geometry,material)
      const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial);
      scene.add(sphere, particlesMesh)
- 
- 
-
 
     //===================== CAMERA
     camera.position.z = 5;
-
 }
-
 
 //===================== MOUSE EVENT
 
@@ -291,7 +284,7 @@ const clock = new THREE.Clock();
 
  function animate() {
     //  requestAnimationFrame(animate);
-    if (mother) { // check to see if model loaded first
+    if (mother1) { // check to see if model loaded first
         mixer1.update(clock.getDelta());
     }
 
