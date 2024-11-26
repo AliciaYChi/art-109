@@ -8,6 +8,24 @@
     box-sizing: border-box;
 }
 
+.title {
+    text-align: center;
+}
+
+.img_1 {
+    width: 80%;
+    height: 80%;
+}
+
+.upper {
+    box-sizing: border-box ;
+    margin: 0 20%;
+    padding-top: 50px;
+    padding-bottom: 120px;
+    background-color: darkgray;
+    border-radius: 25px;
+}
+
 .container {
     margin: 16px;
     font-family: "Cuprum", sans-serif;
@@ -40,7 +58,8 @@
 
 /* Artist */
 
-.img_1 {
-    width: 30%;
-    height: 30%;
-  }
+
+
+  /* ========================= */
+
+/* Art */
