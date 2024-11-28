@@ -19,7 +19,7 @@
 
 .upper {
     box-sizing: border-box ;
-    margin: 0 20%;
+    margin: 10% 10%;
     padding-top: 50px;
     padding-bottom: 120px;
     background-color: darkgray;
@@ -57,9 +57,51 @@
 /* ========================= */
 
 /* Artist */
+.a_chef {
+    box-sizing: border-box ;
+    margin: 10% 10%;
+    padding-top: 50px;
+    padding-bottom: 120px;
+    background-color: orange;
+    border-radius: 25px;
+    color: white;
+   
+}
 
 
+.text_a_chef {
+    text-align: center;
+    font-size: 3rem;
+}
 
-  /* ========================= */
+/* ========================= */
 
 /* Art */
+body.art {
+    background-image: url(/assignments/final-assignment/images/img_bg_3.jpg);
+    background-size: cover;
+}
+
+.artist {
+    box-sizing: border-box ;
+    margin: 3% 10%;
+    padding: 12px;
+    background-color: rgb(165, 165, 165, 0.8);
+    border-radius: 25px;
+}
+
+.artist_text {
+    text-align: center;
+    font-size: 3rem;
+    margin: 5%;
+}
+
+.artist_text b:nth-child(1) {
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
+    background-color: red;
+    padding: 12px;
+    border-radius: 5%;
+}
+
+/* YES */
