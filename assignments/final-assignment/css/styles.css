@@ -1,7 +1,8 @@
 
 /* Index */
+
 .index {
-    background-color: antiquewhite;
+    background-image: url(/assignments/final-assignment/images/img_bg_2.jpg);
 }
 
 *{
@@ -19,7 +20,7 @@
 
 .upper {
     box-sizing: border-box ;
-    margin: 10% 10%;
+    margin: 5% 5%;
     padding-top: 50px;
     padding-bottom: 120px;
     background-color: darkgray;
@@ -86,7 +87,7 @@ a:link {
     background-color: transparent;
     text-decoration: none;
     background-color: red;
-    padding: 12px;
+    padding: 10px;
     border-radius: 5%;
   }
   
@@ -122,7 +123,6 @@ body.artist {
     background-attachment: fixed;
     background-position: center;
 
-    
 }
 
 
@@ -163,9 +163,9 @@ body.yes_bg{
 }
 .yes {
     box-sizing: border-box ;
-    margin: 10% 10%;
-    padding-top: 50px;
-    padding-bottom: 120px;
+    margin: 5% 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
     background-color: rgba(0, 153, 255, 0.8);
     border-radius: 25px;
     color: white;
@@ -174,5 +174,10 @@ body.yes_bg{
 .yes_text {
     text-align: center;
     font-size: 3rem;
-    margin: 5%;
+    margin: 0% 5%;
+}
+
+.yes_text b:nth-child(1) {
+    color: rgb(77, 21, 65);
+    text-decoration: underline;
 }
