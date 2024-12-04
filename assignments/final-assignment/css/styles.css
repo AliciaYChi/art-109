@@ -1,186 +1,18 @@
 /* Global */
 
-.center {
-    text-align: center;
-}
 
-/* Footer */
-
-footer {
-    background: #090e14;
-    padding: 0 15px;
-    color: white; 
-    font-size: 1.5rem;
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    margin-top: auto;
-   
-
-}
-
-.button {
-   
-    font-size: 1.5rem;
-    border:none;
-    border-radius: 6px;
-    padding: 15px 32px;
-    margin: 4px 2px;
-    text-align: center;
-    color: white;
-    background: #627fa7;
-    transition-duration: 0.4s;
-}
-
-.button:hover{
-    background: #b5d5ff; 
-    color: white;
-}
 
 /* Index */
 
-.index {
-    background-image: url(/assignments/final-assignment/images/img_bg_2.jpg);
-}
-
-*{
-    box-sizing: border-box;
-}
-
-.title {
-    text-align: center;
-}
-
-.upper {
-
-    margin: 0 5%;
-    padding-top: 20px;
-    padding-bottom:120px;
-    background-color: darkgray;
-    border-radius: 25px;
-}
-
-.container {
-    margin: 16px;
-    font-family: "Cuprum", sans-serif;
-    font-size: 1.5rem;
-    line-height: 1.4;
-    margin-top: 8%;
-    
-}
-
-.column {
-    float: left;
-    width: 50%;
-    padding: 10px;
-    padding: 0 5%;
-    
-}
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-
-.definitions {
-    text-align: left;
-}
-
-.define {
-    margin-left: 60px;
-}
-
-/* ========================= */
 
 /* Are You An Artist */
-body.r_u_artist {
-    background-image: url(/assignments/final-assignment/images/img_bg_0.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.a_chef {
-    box-sizing: border-box ;
-    margin: 10% 10%;
-    padding-top: 50px;
-    padding-bottom: 120px;
-    background-color: rgba(0, 153, 255, 0.8);
-    border-radius: 25px;
-    color: white;
-}
-
-.text_a_chef {
-    text-align: center;
-    font-size: 3rem;
-}
-
-.answer_no {
-    padding: 20px;
-}
 
 
-/* ========================= */
 /* Artist */
-body.artist {
-    background-image: url(/assignments/final-assignment/images/img_bg_1.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-
-}
 
 
-/* ++++++++++++++++++++++++++++++++++ */
+
 /* Art */
-.art {
-    background-image: url(/assignments/final-assignment/images/img_bg_3.jpg);
-    background-size: cover;
-}
 
-.art_1 {
-    box-sizing: border-box ;
-    margin: 3% 10%;
-    padding: 12px;
-    background-color: rgb(165, 165, 165, 0.8);
-    border-radius: 25px;
-}
 
-.art_text {
-    text-align: center;
-    font-size: 3rem;
-    margin: 5%;
-}
-
-.art_text b:nth-child(1) {
-    color: rgb(255, 255, 255);
-    text-decoration: underline;
-    background-color: red;
-    padding: 8px;
-    border-radius: 3%;
-}
-
-/* ========================= */
 /* YES */
-body.yes_bg{
-    background-image: url(/assignments/final-assignment/images/img_bg_3.jpg);
-    background-size: cover;
-}
-.yes {
-    box-sizing: border-box ;
-    margin: 6%;
-    padding-top: 5%;
-    padding-bottom: 5%;
-    background-color: rgba(0, 153, 255, 0.8);
-    border-radius: 25px;
-    color: white;
-}
-
-.yes_text {
-    text-align: center;
-    font-size: 3rem;
-    margin: 0% 5%;
-}
-
-.yes_text b:nth-child(1) {
-    color: rgb(255, 238, 0);
-    text-decoration: underline;
-}
