@@ -1,10 +1,46 @@
+/* Global */
+
+.center {
+    text-align: center;
+}
+
+/* Footer */
+
+footer {
+    background: #090e14;
+    padding: 0 15px;
+    color: white; 
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-top: auto;
+   
+
+}
+
+.button {
+   
+    font-size: 1.5rem;
+    border:none;
+    border-radius: 6px;
+    padding: 15px 32px;
+    margin: 4px 2px;
+    text-align: center;
+    color: white;
+    background: #627fa7;
+    transition-duration: 0.4s;
+}
+
+.button:hover{
+    background: #b5d5ff; 
+    color: white;
+}
 
 /* Index */
 
 .index {
     background-image: url(/assignments/final-assignment/images/img_bg_2.jpg);
-    background-size:;
-  
 }
 
 *{
@@ -15,16 +51,11 @@
     text-align: center;
 }
 
-.img_1 {
-    width: 80%;
-    height: 80%;
-}
-
 .upper {
-    box-sizing: border-box ;
-    margin: 5% 5%;
-    padding-top: 50px;
-    padding-bottom: 120px;
+
+    margin: 0 5%;
+    padding-top: 20px;
+    padding-bottom:120px;
     background-color: darkgray;
     border-radius: 25px;
 }
@@ -86,38 +117,6 @@ body.r_u_artist {
     padding: 20px;
 }
 
-a:link {
-    color: rgb(28, 0, 128);
-    background-color: transparent;
-    text-decoration: none;
-    background-color: red;
-    padding: 10px;
-    border-radius: 5%;
-  }
-  
-  a:visited {
-    color: pink;
-    background-color: transparent;
-    text-decoration: none;
-    background-color: red;
-    padding: 8px;
-    border-radius: 3%;
-  }
-  
-  a:hover {
-    color: red;
-    background-color: transparent;
-    text-decoration: underline;
-    background-color: rgb(255, 245, 108);
-    padding: 8px;
-    border-radius: 3%;
-  }
-  
-  a:active {
-    color: rgb(255, 0, 212);
-    background-color: transparent;
-    text-decoration: underline;
-  }
 
 /* ========================= */
 /* Artist */
@@ -132,12 +131,12 @@ body.artist {
 
 /* ++++++++++++++++++++++++++++++++++ */
 /* Art */
-body.art {
+.art {
     background-image: url(/assignments/final-assignment/images/img_bg_3.jpg);
     background-size: cover;
 }
 
-.artist {
+.art_1 {
     box-sizing: border-box ;
     margin: 3% 10%;
     padding: 12px;
@@ -145,18 +144,18 @@ body.art {
     border-radius: 25px;
 }
 
-.artist_text {
+.art_text {
     text-align: center;
     font-size: 3rem;
     margin: 5%;
 }
 
-.artist_text b:nth-child(1) {
+.art_text b:nth-child(1) {
     color: rgb(255, 255, 255);
     text-decoration: underline;
     background-color: red;
-    padding: 12px;
-    border-radius: 5%;
+    padding: 8px;
+    border-radius: 3%;
 }
 
 /* ========================= */
@@ -167,7 +166,7 @@ body.yes_bg{
 }
 .yes {
     box-sizing: border-box ;
-    margin: 5% 10%;
+    margin: 6%;
     padding-top: 5%;
     padding-bottom: 5%;
     background-color: rgba(0, 153, 255, 0.8);
@@ -182,6 +181,6 @@ body.yes_bg{
 }
 
 .yes_text b:nth-child(1) {
-    color: rgb(77, 21, 65);
+    color: rgb(255, 238, 0);
     text-decoration: underline;
 }
