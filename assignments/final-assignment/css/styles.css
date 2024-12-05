@@ -1,6 +1,6 @@
 /* Index */
 .index {
-    background: url("images/img_bg_2.jpg");
+    background: url(../images/img_bg_2.jpg);
     background-repeat: no-repeat;
 }
 
@@ -56,8 +56,8 @@
 /* ========================= */
 
 /* Are You An Artist */
-body.r_u_artist {
-    background-image: url("images/img_bg_0.jpg");
+.r_u_artist {
+    background-image: url(../images/img_bg_0.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -115,8 +115,8 @@ a:link {
 
 /* ========================= */
 /* Artist */
-body.artist {
-    background-image: url("images/img_bg_1.jpg");
+.artist {
+    background-image: url(../images/img_bg_1.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -127,12 +127,12 @@ body.artist {
 
 /* ++++++++++++++++++++++++++++++++++ */
 /* Art */
-body.art {
-    background-image: url("images/img_bg_3.jpg");
+.art {
+    background-image: url(../images/img_bg_3.jpg);
     background-size: cover;
 }
 
-.artist {
+.artist_1 {
     box-sizing: border-box ;
     margin: 3% 10%;
     padding: 12px;
@@ -157,7 +157,7 @@ body.art {
 /* ========================= */
 /* YES */
 body.yes_bg{
-    background-image: url("images/img_bg_3.jpg");
+    background-image: url(../images/img_bg_3.jpg);
     background-size: cover;
 }
 .yes {
