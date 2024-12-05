@@ -1,18 +1,177 @@
-/* Global */
-
-
-
 /* Index */
+.index {
+    background: url(/assignments/final-assignment/images/img_bg_2.jpg);
+    background-repeat: no-repeat;
+}
 
+*{
+    box-sizing: border-box;
+}
+
+.title {
+    text-align: center;
+}
+
+
+.center{
+    text-align: center;
+}
+
+.upper {
+    box-sizing: border-box ;
+    margin: 10% 10%;
+    padding-top: 20px;
+    padding-bottom: 60px;
+    background-color: darkgray;
+    border-radius: 25px;
+}
+
+.container {
+    margin: 16px;
+    font-size: 1.5rem;
+    line-height: 1.4;
+    
+}
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    padding: 2%;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+.definitions {
+    text-align: left;
+}
+
+.define {
+    margin-left: 60px;
+}
+
+/* ========================= */
 
 /* Are You An Artist */
+body.r_u_artist {
+    background-image: url(/assignments/final-assignment/images/img_bg_0.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.a_chef {
+    box-sizing: border-box ;
+    margin: 10% 10%;
+    padding-top: 50px;
+    padding-bottom: 120px;
+    background-color: rgba(0, 153, 255, 0.8);
+    border-radius: 25px;
+    color: white;
+}
 
+.text_a_chef {
+    text-align: center;
+    font-size: 3rem;
+}
 
+.answer_no {
+    padding: 20px;
+}
+
+a:link {
+    color: rgb(28, 0, 128);
+    background-color: transparent;
+    text-decoration: none;
+    background-color: red;
+    padding: 12px;
+    border-radius: 5%;
+  }
+  
+  a:visited {
+    color: pink;
+    background-color: transparent;
+    text-decoration: none;
+    background-color: red;
+    padding: 12px;
+    border-radius: 5%;
+  }
+  
+  a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+    background-color: rgb(255, 245, 108);
+    padding: 12px;
+    border-radius: 5%;
+  }
+  
+  a:active {
+    color: rgb(255, 0, 212);
+    background-color: transparent;
+    text-decoration: underline;
+  }
+
+/* ========================= */
 /* Artist */
+body.artist {
+    background-image: url(/assignments/final-assignment/images/img_bg_1.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+
+    
+}
 
 
-
+/* ++++++++++++++++++++++++++++++++++ */
 /* Art */
+body.art {
+    background-image: url(/assignments/final-assignment/images/img_bg_3.jpg);
+    background-size: cover;
+}
 
+.artist {
+    box-sizing: border-box ;
+    margin: 3% 10%;
+    padding: 12px;
+    background-color: rgb(165, 165, 165, 0.8);
+    border-radius: 25px;
+}
 
+.artist_text {
+    text-align: center;
+    font-size: 3rem;
+    margin: 5%;
+}
+
+.artist_text b:nth-child(1) {
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
+    background-color: red;
+    padding: 12px;
+    border-radius: 5%;
+}
+
+/* ========================= */
 /* YES */
+body.yes_bg{
+    background-image: url(/assignments/final-assignment/images/img_bg_3.jpg);
+    background-size: cover;
+}
+.yes {
+    box-sizing: border-box ;
+    margin: 10% 10%;
+    padding-top: 50px;
+    padding-bottom: 120px;
+    background-color: rgba(0, 153, 255, 0.8);
+    border-radius: 25px;
+    color: white;
+}
+
+.yes_text {
+    text-align: center;
+    font-size: 3rem;
+    margin: 5%;
+}
