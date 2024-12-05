@@ -162,8 +162,8 @@ body.yes_bg{
 }
 .yes {
     box-sizing: border-box ;
-    margin: 10% 10%;
-    padding-top: 50px;
+    margin: 6% 10%;
+    padding-top: 10px;
     padding-bottom: 120px;
     background-color: rgba(0, 153, 255, 0.8);
     border-radius: 25px;
